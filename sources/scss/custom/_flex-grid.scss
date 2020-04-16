@@ -1,0 +1,151 @@
+//
+// Flex Grid system
+// --------------------------------------------------
+
+
+// Base Grid Styles
+// --------------------------------------------------
+
+.shell,
+.shell-wide,
+.shell-fluid{
+  @include make-shell($cell-spacing);
+}
+
+.shell,
+.shell-wide{
+  min-width: $shell-width;
+  max-width: $shell-xs-width;
+
+  @include media-breakpoint-up(md) {
+    max-width: map-get($container-max-widths, md);
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: map-get($container-max-widths, lg);
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: map-get($container-max-widths, xl);
+  }
+}
+
+.shell-wide {
+  @include media-breakpoint-up(xxl) {
+    max-width: $shell-xl-width;
+  }
+}
+
+.range {
+  @include make-range($cell-spacing);
+
+  > .range{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.range-spacer{
+  @include flex-basis(100%);
+}
+
+[class*="cell-"] {
+  @include make-cell-spacing($cell-spacing);
+}
+
+// Create IE 9 and below degradation styles
+html.lt-ie-10 * + .range,
+* + .range {
+  margin-top: $range-ws;
+}
+
+html.lt-ie-10 * + [class*='cell-'],
+* + [class*='cell-'],
+html.lt-ie-10 * + .range-sm,
+* + .range-sm {
+  margin-top: $range-ws-sm;
+}
+
+html.lt-ie-10 * + .range-lg,
+* + .range-lg {
+  margin-top: $range-ws-lg;
+}
+
+html.lt-ie-10 .range-condensed,
+.range-condensed {
+  margin-left: 0;
+  margin-right: 0;
+
+  > [class*='cell'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  > *  + [class*='cell'] {
+    margin-top: 0;
+  }
+}
+
+html.lt-ie-10 .range-narrow,
+.range-narrow {
+  @include make-range($cell-spacing-narrow);
+
+  > [class*='cell'] {
+    @include make-cell-spacing($cell-spacing-narrow);
+  }
+
+  > *  + [class*='cell'] {
+    @include make-cell-spacing($cell-spacing-narrow);
+  }
+}
+
+
+// Flex Grid Styles
+// --------------------------------------------------
+
+@include media-breakpoint-up(sm) {
+  .range {
+    @include display-flex();
+    @include flex(0 1 auto);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    > .range{
+      @include flex-basis(100%);
+    }
+  }
+
+  .range-vertical{
+    @include flex-direction(column);
+  }
+
+  .range > [class*='cell'] {
+    @include flex(0 0 auto);
+    @include flex-basis(100%);
+  }
+}
+
+@each $resolution, $alias in ($screen-xs-min : xs, $screen-sm-min : sm, $screen-md-min : md, $screen-lg-min : lg, $screen-xl-min : xl) {
+  @media (min-width: $resolution) {
+    * + [class*='cell-#{$alias}-'] {
+      margin-top: 0;
+    }
+
+    @include make-grid-system($alias, $cell-count);
+  }
+}
+
+// Grid 7 columns
+.range-7 {
+  @each $resolution, $alias in ($screen-xs-min : xs, $screen-sm-min : sm, $screen-md-min : md, $screen-lg-min : lg, $screen-xl-min : xl) {
+    @media (min-width: $resolution) {
+      @include make-additional-grid-system($alias, 7);
+    }
+  }
+}
+
+html.lt-ie-10 {
+  .range > {
+    @include make-fallback($cell-count);
+  }
+}
