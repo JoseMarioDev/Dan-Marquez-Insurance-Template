@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/updated-styles.css" />
     <script
       src="https://kit.fontawesome.com/ab101fff48.js"
       crossorigin="anonymous"
@@ -45,13 +46,18 @@
       </div>
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
-  </head>
+   </head>
   <body>
     <div class="page">
       <div class="page-loader page-loader-variant-1">
         <div>
           <a class="brand brand-md brand-inverse" href="index.html"
-            ><img src="img/logo1.svg" width="118" height="34" alt=""
+            ><img
+              src="img/logo1.svg"
+              id="dmLogo"
+              width="118"
+              height="34"
+              alt=""
           /></a>
           <div class="page-loader-body">
             <div id="spinningSquaresG">
@@ -69,7 +75,7 @@
       </div>
       <header class="page-head">
         <div class="rd-navbar-wrap">
-          <nav
+          <nav            
             class="rd-navbar rd-navbar-corporate-light"
             data-layout="rd-navbar-fixed"
             data-sm-layout="rd-navbar-fixed"
@@ -96,7 +102,7 @@
                   >
                     <span></span>
                   </div>
-                   <div class="rd-navbar-aside-content">
+                  <div class="rd-navbar-aside-content">
                     <ul class="rd-navbar-aside-group list-units">
                       <li>
                         <div
@@ -204,19 +210,24 @@
                 </div> -->
               </div>
               <div class="rd-navbar-group">
-                <div class="rd-navbar-panel">
+                <div id="dmPanel" class="rd-navbar-panel">
                   <button
                     class="rd-navbar-toggle"
                     data-rd-navbar-toggle=".rd-navbar-nav-wrap"
                   >
                     <span></span></button
                   ><a class="rd-navbar-brand brand" href="index.html"
-                    ><img src="images/logo1.svg" width="118" height="34" alt=""
+                    ><img
+                      id="dmLogo"
+                      src="images/logo1.svg"
+                      width="118"
+                      height="34"
+                      alt=""
                   /></a>
                 </div>
                 <div class="rd-navbar-nav-wrap">
                   <div class="rd-navbar-nav-inner">
-                    <div class="rd-navbar-btn-wrap">
+                    <div id="dmNavbar" class="rd-navbar-btn-wrap">
                       <a
                         class="btn btn-smaller btn-cello-outline"
                         href="appointment.html"
@@ -357,7 +368,7 @@
           </nav>
         </div>
       </header>
-      <section>
+      <section id="dmSwiper">
         <div
           class="swiper-container swiper-slider swiper-variant-1"
           data-loop="false"

@@ -1,0 +1,14 @@
+@media (max-width: 991px) {
+  #dmLogo {
+    width: 118px !important;
+  }
+  #dmPanel {
+    height: 120px;
+  }
+  #dmSwiper {
+    margin-top: 15%;
+  }
+  #dmNavbar {
+    padding: 100px 10px 40px 10px;
+  }
+}

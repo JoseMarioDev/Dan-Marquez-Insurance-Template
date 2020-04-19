@@ -4183,7 +4183,7 @@ tbody.collapse.show {
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0;
-  }
+  }  
 }
 
 @media (min-width: 992px) {
