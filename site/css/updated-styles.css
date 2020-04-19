@@ -11,4 +11,10 @@
   #dmNavbar {
     padding: 100px 10px 40px 10px;
   }
+  #dmThumbnail {
+    display: none;
+  }
+  .thumbnail-variant-2:before {
+    background: none;
+  }
 }
