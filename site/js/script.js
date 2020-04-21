@@ -497,7 +497,7 @@ $(function () {
    * RD Google Maps
    * @description Enables RD Google Maps plugin
    */
-  
+  exports.staticMap = ([lng, lat]) => `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=14&size=800x150&key=${process.env.MAP_KEY}&markers=${lat},${lng}&scale=2`;
 
   if (plugins.rdGoogleMaps.length) {
     $.getScript(`//maps.google.com/maps/api/js?key=${process.env.API_KEY}&sensor=false&libraries=geometry,places&v=3.7`, function () {
