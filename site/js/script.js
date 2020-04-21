@@ -497,8 +497,10 @@ $(function () {
    * RD Google Maps
    * @description Enables RD Google Maps plugin
    */
+  
+
   if (plugins.rdGoogleMaps.length) {
-    $.getScript("//maps.google.com/maps/api/js?key=AIzaSyA_LTtiLKmp-9ArBi7dTUxYUnxKhanxxRM&sensor=false&libraries=geometry,places&v=3.7", function () {
+    $.getScript(`//maps.google.com/maps/api/js?key=${process.env.API_KEY}&sensor=false&libraries=geometry,places&v=3.7`, function () {
       var head = document.getElementsByTagName('head')[0],
         insertBefore = head.insertBefore;
 
