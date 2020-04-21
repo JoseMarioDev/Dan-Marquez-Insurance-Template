@@ -1,2 +1,7 @@
 *.env
 .env
+
+js/scripts.js
+
+.js
+*.js
