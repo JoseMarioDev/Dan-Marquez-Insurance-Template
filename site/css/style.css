@@ -27125,6 +27125,10 @@ input::-webkit-autofill + .form-label {
   font-weight: 400;
 }
 
+.hidden-label {
+  display: none;
+}
+
 .input-sm,
 .input-lg,
 .form-input {
