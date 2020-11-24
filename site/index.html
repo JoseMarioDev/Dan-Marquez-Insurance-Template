@@ -1266,6 +1266,9 @@
                   <form class="inset-xl-right-50 rd-mailform" data-form-output="form-output-global"
                     data-form-type="contact" method="post" action="bat/rd-mailform.php">
 
+                    <!-- ---- START OF AUTO SECTION ---- -->
+                    <!-- ----------------------------------- -->
+
                     <div class="row row-20">
                       <div class="col-md-12">
                         <h6 class="text-spacing-0 font-default">
@@ -1287,15 +1290,15 @@
                         </div>
 
                         <div class="form-wrap form-wrap-outside">
-                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-street"
-                            type="text" name="street" data-constraints="@Required" />
-                          <label class="form-label" for="car-contact-street">zip</label>
+                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-zip"
+                            type="number" name="zip" data-constraints="@Required @Numeric" />
+                          <label class="form-label" for="car-contact-zip">zip</label>
                         </div>
 
                         <div class="form-wrap form-wrap-outside">
-                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-street"
-                            type="text" name="street" data-constraints="@Required" />
-                          <label class="form-label" for="car-contact-street">email</label>
+                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-email"
+                            type="email" name="email" data-constraints="@Required @Email" />
+                          <label class="form-label" for="car-contact-email">email</label>
                         </div>
 
                         <div class="form-wrap form-wrap-outside">
@@ -1303,7 +1306,7 @@
                             Birthday
                           </h6>
                           <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-date" type="date"
-                            name="dob" data-constraints="@Required @Date" placeholder="date of birth" />
+                            name="date" data-constraints="@Required @Date" placeholder="date of birth" />
                           <label class="form-label" for="car-contact-date"></label>
                         </div>
 
@@ -1315,20 +1318,20 @@
                       <div class="col-md-6">
                         <div class="form-wrap form-wrap-outside">
                           <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-phone"
-                            type="text" name="phone" data-constraints="@Required @Numeric" />
+                            type="number" name="phone" data-constraints="@Required @Numeric" />
                           <label class="form-label" for="car-contact-phone">phone</label>
                         </div>
 
                         <div class="form-wrap form-wrap-outside">
-                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-street"
-                            type="text" name="street" data-constraints="@Required" />
-                          <label class="form-label" for="car-contact-street">city</label>
+                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-city" type="text"
+                            name="city" data-constraints="@Required" />
+                          <label class="form-label" for="car-contact-city">city</label>
                         </div>
 
                         <div class="form-wrap form-wrap-outside">
-                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-street"
-                            type="text" name="street" data-constraints="@Required" />
-                          <label class="form-label" for="car-contact-street">years at current address</label>
+                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-years"
+                            type="number" name="years" data-constraints="@Required @Numeric" />
+                          <label class="form-label" for="car-contact-years">years at current address</label>
                         </div>
                       </div>
 
@@ -1341,7 +1344,7 @@
                       <div class="col-md-6">
                         <div class="form-wrap form-wrap-outside">
                           <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-license"
-                            type="text" name="license" data-constraints="@Required @Numeric" />
+                            type="text" name="license" data-constraints="@Required" />
                           <label class="form-label" for="car-contact-license">Drivers License</label>
                         </div>
                       </div>
@@ -1349,16 +1352,16 @@
                       <div class="col-md-6">
                         <div class="form-wrap form-wrap-outside">
                           <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-vin" type="text"
-                            name="vin" data-constraints="@Required @Numeric" />
+                            name="vin" data-constraints="@Required" />
                           <label class="form-label" for="car-contact-vin">Automobile VIN</label>
                         </div>
                       </div>
 
                       <div class="col-md-6">
                         <div class="form-wrap form-wrap-outside">
-                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-email"
-                            type="text" name="email" data-constraints="@Email @Required " />
-                          <label class="form-label" for="car-contact-email">name of referral</label>
+                          <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-referral"
+                            type="text" name="referral" data-constraints="@Required " />
+                          <label class="form-label" for="car-contact-referral">name of referral</label>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -1367,6 +1370,8 @@
                           <span>Get a Quote</span><span class="icon icon-xs-smaller fa-angle-right"></span>
                         </button>
                       </div>
+
+                      <!-- ----END OF AUTO SECTION -->
                     </div>
                   </form>
                 </div>
